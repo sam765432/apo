@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+}
+img {
+  max-width: 150%; /* Ensures the image does not exceed the width of the button */
+  max-height: 100%; /* Ensures the image does not exceed the height of the button */
+  vertical-align: middle; /* Align the image vertically in the button */
+  margin-right: 5px; /* Add spacing between image and text */
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffc9c9;
+}
+
+header {
+  width: 100%;
+  padding: 1.2rem 0;
+  margin: 0;
+  height: 10%;
+}
+
+h1.secondary-title {
+  display: none;
+}
+h1.third-title {
+  display: none;
+}
+
+
+.wrapper,
+.result {
+  width: 800px;
+  margin: 0 auto;
+  height: 700px;
+  position: relative;
+}
+
+.result {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+#fixed {
+  position: relative;
+  border: 3px solid rgba(196, 77, 86, 0.8);
+  background-color: rgba(0, 255, 136, 0.8)
+}
+#runner {
+  position: relative;
+  border: 3px solid rgba(196, 77, 86, 0.8);
+  background-color: rgba(196, 77, 86, 1);
+}
+
+#fixed {
+  display: none;
+  top: 50%;
+  left: 0%;
+  width: 30rem;
+  height: 10.5rem;
+  font-size: 2rem;
+  opacity: 0.4;
+  transition: 0.3s;
+  border-radius: 15px;
+}
+
+#fixed:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+#runner {
+  top: 20%;
+  left: 0%;
+  width: 30rem;
+  height: 10.5rem;
+  font-size: 2rem;
+  transition: 0.1s;
+  border-radius: 35px;
+}
+
+.heart {
+  height: 200px;
+  width: 200px;
+  position: relative;
+  background: #f20044;
+  transform: rotate(-45deg);
+  box-shadow: -30px 30px 120px #f20044;
+  animation: heart 0.6s linear infinite;
+}
+.heart img {
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 30%;
+  left: 68%;
+  transform: translate(-50%, -50%) rotate(+45deg);
+  z-index: 1; /* Set a higher z-index to bring the image to the front */
+  border-radius: 50%;
+
+}
+
+
+.heart:before {
+  content: '';
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  top: -50%;
+  border-radius: 80px;
+  background: #f20044;
+  box-shadow: -30px -30px 120px #f20044;
+}
+
+.heart:after {
+  content: '';
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  right: -50%;
+  background: #f20044;
+  border-radius: 80px;
+  box-shadow: 30px 30px 120px #f20044;
+}
+
+@keyframes heart {
+  0% {
+    transform: rotate(-45deg) scale(1.07);
+  }
+
+  80% {
+    transform: rotate(-45deg) scale(1);
+  }
+
+  100% {
+    transform: rotate(-45deg) scale(0.8);
+  }
+}
